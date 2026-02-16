@@ -1,0 +1,77 @@
+﻿using System;
+using System.Windows.Forms;
+
+namespace PeluGestor.Dialogs
+{
+    public partial class PeluqueriaDialog : Form
+    {
+        public int Id;
+        public string Nombre;
+        public string Direccion;
+        public string Telefono;
+        public string Horario;
+        public string DiasCerrados;
+
+        public PeluqueriaDialog()
+        {
+            InitializeComponent();
+        }
+
+        public void CargarParaEditar(int id, string nombre, string direccion, string telefono, string horario, string dias)
+        {
+            Id = id;
+            TxtNombre.Text = nombre;
+            TxtDireccion.Text = direccion;
+            TxtTelefono.Text = telefono;
+            TxtHorario.Text = horario;
+            TxtDias.Text = dias;
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            if (TxtNombre.Text == null || TxtNombre.Text.Trim() == "")
+            {
+                MessageBox.Show(
+                    "El nombre es obligatorio.",
+                    "Aviso",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning
+                );
+                TxtNombre.Focus();
+                return;
+            }
+
+            string tel = TxtTelefono.Text.Trim();
+
+            if (tel != "")
+            {
+                if (tel.Length != 9 || !long.TryParse(tel, out _))
+                {
+                    MessageBox.Show(
+                        "El telefono debe tener 9 digitos y contener solo numeros.",
+                        "Aviso",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Warning
+                    );
+                    TxtTelefono.Focus();
+                    return;
+                }
+            }
+
+            Nombre = TxtNombre.Text.Trim();
+            Direccion = TxtDireccion.Text.Trim();
+            Telefono = TxtTelefono.Text.Trim();
+            Horario = TxtHorario.Text.Trim();
+            DiasCerrados = TxtDias.Text.Trim();
+
+            this.DialogResult = DialogResult.OK;
+            this.Close();
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.Cancel;
+            this.Close();
+        }
+    }
+}

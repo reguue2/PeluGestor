@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{ECBA567C-3005-4F26-B14D-C47373A7551F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PeluGestor</RootNamespace>
+    <AssemblyName>PeluGestor</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icono.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>PeluGestor.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data\Db.cs" />
+    <Compile Include="Data\PeluqueriasDao.cs" />
+    <Compile Include="Data\PeluquerosDao.cs" />
+    <Compile Include="Data\ReservasDao.cs" />
+    <Compile Include="Data\ServiciosDao.cs" />
+    <Compile Include="Dialogs\PeluqueriaDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\PeluqueriaDialog.Designer.cs">
+      <DependentUpon>PeluqueriaDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\PeluqueroDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\PeluqueroDialog.Designer.cs">
+      <DependentUpon>PeluqueroDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\ReservaDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\ReservaDialog.Designer.cs">
+      <DependentUpon>ReservaDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\ServicioDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\ServicioDialog.Designer.cs">
+      <DependentUpon>ServicioDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SplashForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplashForm.Designer.cs">
+      <DependentUpon>SplashForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\InicioView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\InicioView.Designer.cs">
+      <DependentUpon>InicioView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PeluqueriasView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\PeluqueriasView.Designer.cs">
+      <DependentUpon>PeluqueriasView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PeluquerosView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\PeluquerosView.Designer.cs">
+      <DependentUpon>PeluquerosView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ReservasView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ReservasView.Designer.cs">
+      <DependentUpon>ReservasView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ServiciosView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ServiciosView.Designer.cs">
+      <DependentUpon>ServiciosView.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Dialogs\PeluqueriaDialog.resx">
+      <DependentUpon>PeluqueriaDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\PeluqueroDialog.resx">
+      <DependentUpon>PeluqueroDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ReservaDialog.resx">
+      <DependentUpon>ReservaDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ServicioDialog.resx">
+      <DependentUpon>ServicioDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SplashForm.resx">
+      <DependentUpon>SplashForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\InicioView.resx">
+      <DependentUpon>InicioView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\PeluqueriasView.resx">
+      <DependentUpon>PeluqueriasView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\PeluquerosView.resx">
+      <DependentUpon>PeluquerosView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ReservasView.resx">
+      <DependentUpon>ReservasView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ServiciosView.resx">
+      <DependentUpon>ServiciosView.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="icono.ico" />
+    <Content Include="Recursos\icono.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Recursos\inicio.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Recursos\Logo Integrow.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Recursos\peluquero.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Recursos\reserva.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Recursos\salir.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Recursos\servicio.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Recursos\tijera.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
