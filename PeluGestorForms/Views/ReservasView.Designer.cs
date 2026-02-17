@@ -26,7 +26,7 @@ namespace PeluGestor.Views
 
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.topPanel = new System.Windows.Forms.Panel();
             this.lblPeluqueria = new System.Windows.Forms.Label();
             this.CmbPeluqueria = new System.Windows.Forms.ComboBox();
@@ -61,7 +61,7 @@ namespace PeluGestor.Views
             // 
             // lblPeluqueria
             // 
-            this.lblPeluqueria.Location = new System.Drawing.Point(18, 8);
+            this.lblPeluqueria.Location = new System.Drawing.Point(22, 4);
             this.lblPeluqueria.Name = "lblPeluqueria";
             this.lblPeluqueria.Size = new System.Drawing.Size(66, 23);
             this.lblPeluqueria.TabIndex = 0;
@@ -70,7 +70,7 @@ namespace PeluGestor.Views
             // 
             // CmbPeluqueria
             // 
-            this.CmbPeluqueria.Location = new System.Drawing.Point(90, 8);
+            this.CmbPeluqueria.Location = new System.Drawing.Point(94, 6);
             this.CmbPeluqueria.Name = "CmbPeluqueria";
             this.CmbPeluqueria.Size = new System.Drawing.Size(260, 21);
             this.CmbPeluqueria.TabIndex = 1;
@@ -78,7 +78,7 @@ namespace PeluGestor.Views
             // 
             // lblFecha
             // 
-            this.lblFecha.Location = new System.Drawing.Point(360, 8);
+            this.lblFecha.Location = new System.Drawing.Point(360, 4);
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.Size = new System.Drawing.Size(54, 23);
             this.lblFecha.TabIndex = 2;
@@ -150,14 +150,14 @@ namespace PeluGestor.Views
             this.Grid.AllowUserToResizeColumns = false;
             this.Grid.AllowUserToResizeRows = false;
             this.Grid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Grid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Grid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.Grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.Grid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Grid.Location = new System.Drawing.Point(0, 40);
