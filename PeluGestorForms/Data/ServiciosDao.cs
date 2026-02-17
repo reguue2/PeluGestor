@@ -123,5 +123,34 @@ namespace PeluGestor.Data
             string sql = @"DELETE FROM dbo.Servicios WHERE Id = @id;";
             return Db.EjecutarCRUD(sql, new SqlParameter("@id", id));
         }
+
+        public static bool TieneReservasFuturas(int servicioId)
+        {
+            string sql = @"
+                SELECT COUNT(*) 
+                FROM Reservas
+                WHERE ServicioId = @Id
+                AND Fecha >= GETDATE()
+                AND Estado <> 'cancelada';";
+
+            using (var con = new SqlConnection(Db.ConexionString))
+            using (var cmd = new SqlCommand(sql, con))
+            {
+                cmd.Parameters.AddWithValue("@Id", servicioId);
+                con.Open();
+                int count = (int)cmd.ExecuteScalar();
+                return count > 0;
+            }
+        }
+        public static void QuitarReservasPasadas(int servicioId)
+        {
+            string sql = @"
+                DELETE FROM dbo.Reservas
+                WHERE ServicioId = @sid
+                AND Fecha < CAST(GETDATE() AS DATE);";
+
+            Db.EjecutarCRUD(sql, new SqlParameter("@sid", servicioId));
+        }
+
     }
 }

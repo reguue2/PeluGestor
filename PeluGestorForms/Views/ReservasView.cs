@@ -47,10 +47,15 @@ namespace PeluGestor.Views
 
         private int PeluqueriaId()
         {
-            if (CmbPeluqueria.SelectedValue == null)
+            if (CmbPeluqueria.SelectedItem == null)
                 return 0;
 
-            return Convert.ToInt32(CmbPeluqueria.SelectedValue);
+            DataRowView drv = CmbPeluqueria.SelectedItem as DataRowView;
+
+            if (drv == null)
+                return 0;
+
+            return Convert.ToInt32(drv["Id"]);
         }
 
         private DateTime? FechaSeleccionada()
@@ -288,35 +293,15 @@ namespace PeluGestor.Views
                 if (Grid.Columns.Contains(col))
                     Grid.Columns[col].Visible = false;
 
-            if (Grid.Columns.Contains("Peluqueria"))
-                Grid.Columns["Peluqueria"].Width = 180;
-
-            if (Grid.Columns.Contains("Servicio"))
-                Grid.Columns["Servicio"].Width = 160;
-
-            if (Grid.Columns.Contains("Peluquero"))
-                Grid.Columns["Peluquero"].Width = 140;
-
-            if (Grid.Columns.Contains("Cliente"))
-                Grid.Columns["Cliente"].Width = 160;
-
-            if (Grid.Columns.Contains("Telefono"))
-                Grid.Columns["Telefono"].Width = 120;
-
             if (Grid.Columns.Contains("Fecha"))
             {
-                Grid.Columns["Fecha"].Width = 110;
                 Grid.Columns["Fecha"].DefaultCellStyle.Format = "dd/MM/yyyy";
             }
 
             if (Grid.Columns.Contains("Hora"))
             {
-                Grid.Columns["Hora"].Width = 80;
                 Grid.Columns["Hora"].DefaultCellStyle.Format = @"hh\:mm";
             }
-
-            if (Grid.Columns.Contains("Estado"))
-                Grid.Columns["Estado"].Width = 110;
         }
     }
 }

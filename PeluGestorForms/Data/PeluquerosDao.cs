@@ -1,4 +1,5 @@
-﻿using System.Data;
+﻿using System;
+using System.Data;
 using System.Data.SqlClient;
 
 namespace PeluGestor.Data
@@ -106,5 +107,37 @@ namespace PeluGestor.Data
             string sql = @"DELETE FROM dbo.Peluqueros WHERE Id = @id;";
             return Db.EjecutarCRUD(sql, new SqlParameter("@id", id));
         }
+
+        public static bool TieneReservasFuturas(int peluqueroId)
+        {
+            string sql = @"
+                SELECT COUNT(*)
+                FROM Reservas
+                WHERE PeluqueroId = @Id
+                AND Fecha >= CAST(GETDATE() AS DATE)
+                AND Estado <> 'cancelada';";
+
+            using (var con = new SqlConnection(Db.ConexionString))
+            using (var cmd = new SqlCommand(sql, con))
+            {
+                cmd.Parameters.AddWithValue("@Id", peluqueroId);
+                con.Open();
+                int count = (int)cmd.ExecuteScalar();
+                return count > 0;
+            }
+        }
+
+        public static void QuitarDeReservasPasadas(int peluqueroId)
+        {
+            string sql = @"
+                UPDATE Reservas
+                SET PeluqueroId = NULL
+                WHERE PeluqueroId = @Id
+                AND Fecha < GETDATE();";
+
+            Db.EjecutarCRUD(sql,
+                new SqlParameter("@Id", peluqueroId));
+        }
+
     }
 }

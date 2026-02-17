@@ -26,6 +26,7 @@ namespace PeluGestor.Views
 
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.topPanel = new System.Windows.Forms.Panel();
             this.lblPeluqueria = new System.Windows.Forms.Label();
             this.CmbPeluqueria = new System.Windows.Forms.ComboBox();
@@ -55,20 +56,21 @@ namespace PeluGestor.Views
             this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.topPanel.Location = new System.Drawing.Point(0, 0);
             this.topPanel.Name = "topPanel";
-            this.topPanel.Size = new System.Drawing.Size(659, 40);
+            this.topPanel.Size = new System.Drawing.Size(1254, 40);
             this.topPanel.TabIndex = 1;
             // 
             // lblPeluqueria
             // 
-            this.lblPeluqueria.Location = new System.Drawing.Point(0, 10);
+            this.lblPeluqueria.Location = new System.Drawing.Point(18, 8);
             this.lblPeluqueria.Name = "lblPeluqueria";
-            this.lblPeluqueria.Size = new System.Drawing.Size(100, 23);
+            this.lblPeluqueria.Size = new System.Drawing.Size(66, 23);
             this.lblPeluqueria.TabIndex = 0;
             this.lblPeluqueria.Text = "Peluqueria:";
+            this.lblPeluqueria.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // CmbPeluqueria
             // 
-            this.CmbPeluqueria.Location = new System.Drawing.Point(90, 0);
+            this.CmbPeluqueria.Location = new System.Drawing.Point(90, 8);
             this.CmbPeluqueria.Name = "CmbPeluqueria";
             this.CmbPeluqueria.Size = new System.Drawing.Size(260, 21);
             this.CmbPeluqueria.TabIndex = 1;
@@ -76,16 +78,17 @@ namespace PeluGestor.Views
             // 
             // lblFecha
             // 
-            this.lblFecha.Location = new System.Drawing.Point(360, 10);
+            this.lblFecha.Location = new System.Drawing.Point(360, 8);
             this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(100, 23);
+            this.lblFecha.Size = new System.Drawing.Size(54, 23);
             this.lblFecha.TabIndex = 2;
             this.lblFecha.Text = "Fecha:";
+            this.lblFecha.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // DpFecha
             // 
             this.DpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DpFecha.Location = new System.Drawing.Point(420, 0);
+            this.DpFecha.Location = new System.Drawing.Point(420, 7);
             this.DpFecha.Name = "DpFecha";
             this.DpFecha.ShowCheckBox = true;
             this.DpFecha.Size = new System.Drawing.Size(120, 20);
@@ -94,11 +97,12 @@ namespace PeluGestor.Views
             // 
             // lblEstado
             // 
-            this.lblEstado.Location = new System.Drawing.Point(550, 10);
+            this.lblEstado.Location = new System.Drawing.Point(546, 6);
             this.lblEstado.Name = "lblEstado";
-            this.lblEstado.Size = new System.Drawing.Size(100, 23);
+            this.lblEstado.Size = new System.Drawing.Size(60, 23);
             this.lblEstado.TabIndex = 4;
             this.lblEstado.Text = "Estado:";
+            this.lblEstado.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // CmbEstado
             // 
@@ -106,7 +110,7 @@ namespace PeluGestor.Views
             "Todos",
             "confirmada",
             "cancelada"});
-            this.CmbEstado.Location = new System.Drawing.Point(610, 0);
+            this.CmbEstado.Location = new System.Drawing.Point(612, 6);
             this.CmbEstado.Name = "CmbEstado";
             this.CmbEstado.Size = new System.Drawing.Size(140, 21);
             this.CmbEstado.TabIndex = 5;
@@ -114,7 +118,7 @@ namespace PeluGestor.Views
             // 
             // btnNueva
             // 
-            this.btnNueva.Location = new System.Drawing.Point(760, 0);
+            this.btnNueva.Location = new System.Drawing.Point(771, 6);
             this.btnNueva.Name = "btnNueva";
             this.btnNueva.Size = new System.Drawing.Size(75, 23);
             this.btnNueva.TabIndex = 6;
@@ -123,7 +127,7 @@ namespace PeluGestor.Views
             // 
             // btnEditar
             // 
-            this.btnEditar.Location = new System.Drawing.Point(870, 0);
+            this.btnEditar.Location = new System.Drawing.Point(875, 6);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(75, 23);
             this.btnEditar.TabIndex = 7;
@@ -132,7 +136,7 @@ namespace PeluGestor.Views
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(980, 0);
+            this.btnCancelar.Location = new System.Drawing.Point(974, 6);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 8;
@@ -141,21 +145,37 @@ namespace PeluGestor.Views
             // 
             // Grid
             // 
+            this.Grid.AllowUserToAddRows = false;
+            this.Grid.AllowUserToDeleteRows = false;
+            this.Grid.AllowUserToResizeColumns = false;
+            this.Grid.AllowUserToResizeRows = false;
+            this.Grid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Grid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.Grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.Grid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Grid.Location = new System.Drawing.Point(0, 40);
+            this.Grid.MultiSelect = false;
             this.Grid.Name = "Grid";
             this.Grid.ReadOnly = true;
             this.Grid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Grid.Size = new System.Drawing.Size(659, 676);
+            this.Grid.Size = new System.Drawing.Size(1254, 676);
             this.Grid.TabIndex = 0;
             this.Grid.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.Grid_DataBindingComplete);
             // 
             // ReservasView
             // 
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.Controls.Add(this.Grid);
             this.Controls.Add(this.topPanel);
             this.Name = "ReservasView";
-            this.Size = new System.Drawing.Size(659, 716);
+            this.Size = new System.Drawing.Size(1254, 716);
             this.topPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Grid)).EndInit();
             this.ResumeLayout(false);

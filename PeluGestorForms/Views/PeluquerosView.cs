@@ -44,10 +44,15 @@ namespace PeluGestor.Views
 
         private int PeluqueriaId()
         {
-            if (CmbPeluqueria.SelectedValue == null)
+            if (CmbPeluqueria.SelectedItem == null)
                 return -1;
 
-            return Convert.ToInt32(CmbPeluqueria.SelectedValue);
+            DataRowView row = CmbPeluqueria.SelectedItem as DataRowView;
+
+            if (row == null)
+                return -1;
+
+            return Convert.ToInt32(row["Id"]);
         }
 
         private void CargarDatos()
@@ -183,20 +188,32 @@ namespace PeluGestor.Views
 
             int id = Convert.ToInt32(row["Id"]);
 
+            if (PeluquerosDao.TieneReservasFuturas(id))
+            {
+                MessageBox.Show(
+                    "No se puede eliminar porque tiene reservas futuras.",
+                    "Error",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+                return;
+            }
+
             DialogResult res = MessageBox.Show(
-                "Eliminar peluquero?\nSi tiene reservas, no se permitira.",
+                "Eliminar peluquero?",
                 "Confirmacion",
                 MessageBoxButtons.YesNo,
                 MessageBoxIcon.Warning);
 
             if (res != DialogResult.Yes) return;
 
+            PeluquerosDao.QuitarDeReservasPasadas(id);
+
             int r = PeluquerosDao.Delete(id);
 
             if (r <= 0)
             {
                 MessageBox.Show(
-                    "No se puede eliminar el peluquero porque tiene reservas asociadas.",
+                    "No se pudo eliminar el peluquero.",
                     "Error",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
@@ -206,19 +223,13 @@ namespace PeluGestor.Views
             CargarDatos();
         }
 
+
         private void Grid_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
             if (Grid.Columns.Contains("Id"))
                 Grid.Columns["Id"].Visible = false;
 
-            if (Grid.Columns.Contains("Peluqueria"))
-                Grid.Columns["Peluqueria"].Width = 200;
-
-            if (Grid.Columns.Contains("Nombre"))
-                Grid.Columns["Nombre"].Width = 180;
-
-            if (Grid.Columns.Contains("Activo"))
-                Grid.Columns["Activo"].Width = 90;
+            
         }
     }
 }

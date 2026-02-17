@@ -37,10 +37,13 @@ namespace PeluGestor.Views
             filaTodas["Nombre"] = "Todas";
             dtPelus.Rows.InsertAt(filaTodas, 0);
 
-            CmbPeluqueria.DataSource = dtPelus;
+            CmbPeluqueria.DataSource = null;
+
             CmbPeluqueria.DisplayMember = "Nombre";
             CmbPeluqueria.ValueMember = "Id";
+            CmbPeluqueria.DataSource = dtPelus;
         }
+
 
         private int PeluqueriaId()
         {
@@ -152,7 +155,7 @@ namespace PeluGestor.Views
             string nombre = row["Nombre"].ToString();
             string desc = row["Descripcion"].ToString();
             decimal precio = Convert.ToDecimal(row["Precio"]);
-            int dur = Convert.ToInt32(row["DuracionMin"]);
+            int dur = Convert.ToInt32(row["Duracion"]);
 
             ServicioDialog dlg = new ServicioDialog();
             dlg.CargarParaEditar(nombre, desc, precio, dur);
@@ -196,22 +199,33 @@ namespace PeluGestor.Views
             }
 
             int id = Convert.ToInt32(row["Id"]);
-            string nombre = row["Nombre"].ToString();
+
+            if (ServiciosDao.TieneReservasFuturas(id))
+            {
+                MessageBox.Show(
+                    "No se puede eliminar el servicio porque tiene reservas futuras.",
+                    "Error",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+                return;
+            }
 
             DialogResult res = MessageBox.Show(
-                "Eliminar servicio '" + nombre + "'?\nSi tiene reservas, no se permitira.",
+                "Eliminar servicio?\nSe eliminarán también sus reservas pasadas.",
                 "Confirmacion",
                 MessageBoxButtons.YesNo,
                 MessageBoxIcon.Warning);
 
             if (res != DialogResult.Yes) return;
 
+            ServiciosDao.QuitarReservasPasadas(id);
+
             int r = ServiciosDao.Delete(id);
 
             if (r <= 0)
             {
                 MessageBox.Show(
-                    "No se puede eliminar el servicio porque tiene reservas asociadas.",
+                    "No se pudo eliminar el servicio.",
                     "Error",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
@@ -229,24 +243,13 @@ namespace PeluGestor.Views
             if (Grid.Columns.Contains("PeluqueriaId"))
                 Grid.Columns["PeluqueriaId"].Visible = false;
 
-            if (Grid.Columns.Contains("Peluqueria"))
-                Grid.Columns["Peluqueria"].Width = 180;
-
-            if (Grid.Columns.Contains("Nombre"))
-                Grid.Columns["Nombre"].Width = 180;
-
-            if (Grid.Columns.Contains("Descripcion"))
-                Grid.Columns["Descripcion"].Width = 260;
-
             if (Grid.Columns.Contains("Precio"))
             {
-                Grid.Columns["Precio"].Width = 100;
                 Grid.Columns["Precio"].DefaultCellStyle.Format = "0.00 €";
             }
 
             if (Grid.Columns.Contains("DuracionMin"))
             {
-                Grid.Columns["DuracionMin"].Width = 120;
                 Grid.Columns["DuracionMin"].DefaultCellStyle.Format = "0 'min'";
             }
         }

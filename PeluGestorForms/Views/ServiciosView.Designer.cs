@@ -22,6 +22,7 @@
 
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.topPanel = new System.Windows.Forms.Panel();
             this.lblPeluqueria = new System.Windows.Forms.Label();
             this.CmbPeluqueria = new System.Windows.Forms.ComboBox();
@@ -52,15 +53,16 @@
             // 
             // lblPeluqueria
             // 
-            this.lblPeluqueria.Location = new System.Drawing.Point(0, 10);
+            this.lblPeluqueria.Location = new System.Drawing.Point(3, 6);
             this.lblPeluqueria.Name = "lblPeluqueria";
-            this.lblPeluqueria.Size = new System.Drawing.Size(100, 23);
+            this.lblPeluqueria.Size = new System.Drawing.Size(76, 23);
             this.lblPeluqueria.TabIndex = 0;
             this.lblPeluqueria.Text = "Peluqueria:";
+            this.lblPeluqueria.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // CmbPeluqueria
             // 
-            this.CmbPeluqueria.Location = new System.Drawing.Point(104, 6);
+            this.CmbPeluqueria.Location = new System.Drawing.Point(85, 8);
             this.CmbPeluqueria.Name = "CmbPeluqueria";
             this.CmbPeluqueria.Size = new System.Drawing.Size(260, 21);
             this.CmbPeluqueria.TabIndex = 1;
@@ -68,7 +70,7 @@
             // 
             // btnNuevo
             // 
-            this.btnNuevo.Location = new System.Drawing.Point(389, 5);
+            this.btnNuevo.Location = new System.Drawing.Point(381, 6);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(75, 23);
             this.btnNuevo.TabIndex = 2;
@@ -77,7 +79,7 @@
             // 
             // btnEditar
             // 
-            this.btnEditar.Location = new System.Drawing.Point(489, 4);
+            this.btnEditar.Location = new System.Drawing.Point(485, 6);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(75, 23);
             this.btnEditar.TabIndex = 3;
@@ -86,7 +88,7 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(593, 3);
+            this.btnEliminar.Location = new System.Drawing.Point(589, 6);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(75, 23);
             this.btnEliminar.TabIndex = 4;
@@ -95,15 +97,16 @@
             // 
             // lblBuscar
             // 
-            this.lblBuscar.Location = new System.Drawing.Point(720, 10);
+            this.lblBuscar.Location = new System.Drawing.Point(719, 6);
             this.lblBuscar.Name = "lblBuscar";
-            this.lblBuscar.Size = new System.Drawing.Size(100, 23);
+            this.lblBuscar.Size = new System.Drawing.Size(64, 23);
             this.lblBuscar.TabIndex = 5;
             this.lblBuscar.Text = "Buscar:";
+            this.lblBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // TxtBuscar
             // 
-            this.TxtBuscar.Location = new System.Drawing.Point(826, 7);
+            this.TxtBuscar.Location = new System.Drawing.Point(789, 8);
             this.TxtBuscar.Name = "TxtBuscar";
             this.TxtBuscar.Size = new System.Drawing.Size(200, 20);
             this.TxtBuscar.TabIndex = 6;
@@ -111,8 +114,23 @@
             // 
             // Grid
             // 
+            this.Grid.AllowUserToAddRows = false;
+            this.Grid.AllowUserToDeleteRows = false;
+            this.Grid.AllowUserToResizeColumns = false;
+            this.Grid.AllowUserToResizeRows = false;
+            this.Grid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Grid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.Grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.Grid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Grid.Location = new System.Drawing.Point(0, 40);
+            this.Grid.MultiSelect = false;
             this.Grid.Name = "Grid";
             this.Grid.ReadOnly = true;
             this.Grid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;

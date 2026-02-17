@@ -7,7 +7,7 @@ namespace PeluGestor.Data
 {
     public static class Db
     {
-        private const string ConexionString = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=PeluGestorBD;Integrated Security=True;TrustServerCertificate=True;";
+        public const string ConexionString = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=PeluGestorBD;Integrated Security=True;TrustServerCertificate=True;";
 
         public static DataTable Consulta(string sql, params SqlParameter[] parameters)
         {

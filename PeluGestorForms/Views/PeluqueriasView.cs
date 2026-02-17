@@ -13,6 +13,9 @@ namespace PeluGestor.Views
         public PeluqueriasView()
         {
             InitializeComponent();
+
+            Grid.DataBindingComplete += Grid_DataBindingComplete;
+
             CargarDatos();
         }
 
@@ -148,20 +151,11 @@ namespace PeluGestor.Views
             if (Grid.Columns.Contains("Id"))
                 Grid.Columns["Id"].Visible = false;
 
-            if (Grid.Columns.Contains("Nombre"))
-                Grid.Columns["Nombre"].Width = 200;
-
-            if (Grid.Columns.Contains("Direccion"))
-                Grid.Columns["Direccion"].Width = 260;
-
-            if (Grid.Columns.Contains("Telefono"))
-                Grid.Columns["Telefono"].Width = 120;
-
-            if (Grid.Columns.Contains("Horario"))
-                Grid.Columns["Horario"].Width = 160;
-
             if (Grid.Columns.Contains("DiasCerrados"))
+            {
+                Grid.Columns["DiasCerrados"].HeaderText = "Dias Cerrados";
                 Grid.Columns["DiasCerrados"].Width = 160;
+            }
         }
     }
 }
