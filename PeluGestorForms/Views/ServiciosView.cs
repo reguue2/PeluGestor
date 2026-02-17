@@ -253,5 +253,20 @@ namespace PeluGestor.Views
                 Grid.Columns["DuracionMin"].DefaultCellStyle.Format = "0 'min'";
             }
         }
+
+        private void nuevoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            btnNuevo_Click(sender, e);
+        }
+
+        private void editarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            btnEditar_Click(sender, e);
+        }
+
+        private void eliminarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            btnEliminar_Click(sender, e);
+        }
     }
 }

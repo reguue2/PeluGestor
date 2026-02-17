@@ -303,5 +303,20 @@ namespace PeluGestor.Views
                 Grid.Columns["Hora"].DefaultCellStyle.Format = @"hh\:mm";
             }
         }
+
+        private void nuevaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            btnNueva_Click(sender, e);
+        }
+
+        private void editarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            btnEditar_Click(sender, e);
+        }
+
+        private void cancelarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            btnCancelar_Click(sender, e);
+        }
     }
 }

@@ -192,6 +192,7 @@
     <Content Include="Recursos\icono.ico">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Recursos\Info.png" />
     <Content Include="Recursos\inicio.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

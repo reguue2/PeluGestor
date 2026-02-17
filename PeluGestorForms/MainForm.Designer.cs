@@ -36,10 +36,13 @@
             this.peluquerosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.serviciosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reservasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.informesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.minutosPorTrabajadorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reservasPorFechaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.serviciosPorPeluqueriaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.acercaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MainContentPanel = new System.Windows.Forms.Panel();
-            this.informesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -68,7 +71,7 @@
             // 
             this.inicioToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("inicioToolStripMenuItem.Image")));
             this.inicioToolStripMenuItem.Name = "inicioToolStripMenuItem";
-            this.inicioToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
+            this.inicioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.inicioToolStripMenuItem.Text = "Inicio";
             this.inicioToolStripMenuItem.Click += new System.EventHandler(this.Inicio_Click);
             // 
@@ -76,7 +79,7 @@
             // 
             this.salirToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("salirToolStripMenuItem.Image")));
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.Salir_Click);
             // 
@@ -95,7 +98,7 @@
             // 
             this.peluqueriasToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("peluqueriasToolStripMenuItem.Image")));
             this.peluqueriasToolStripMenuItem.Name = "peluqueriasToolStripMenuItem";
-            this.peluqueriasToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
+            this.peluqueriasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.peluqueriasToolStripMenuItem.Text = "Peluquerias";
             this.peluqueriasToolStripMenuItem.Click += new System.EventHandler(this.Peluquerias_Click);
             // 
@@ -103,7 +106,7 @@
             // 
             this.peluquerosToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("peluquerosToolStripMenuItem.Image")));
             this.peluquerosToolStripMenuItem.Name = "peluquerosToolStripMenuItem";
-            this.peluquerosToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
+            this.peluquerosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.peluquerosToolStripMenuItem.Text = "Peluqueros";
             this.peluquerosToolStripMenuItem.Click += new System.EventHandler(this.Peluqueros_Click);
             // 
@@ -111,7 +114,7 @@
             // 
             this.serviciosToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("serviciosToolStripMenuItem.Image")));
             this.serviciosToolStripMenuItem.Name = "serviciosToolStripMenuItem";
-            this.serviciosToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
+            this.serviciosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.serviciosToolStripMenuItem.Text = "Servicios";
             this.serviciosToolStripMenuItem.Click += new System.EventHandler(this.Servicios_Click);
             // 
@@ -119,9 +122,37 @@
             // 
             this.reservasToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("reservasToolStripMenuItem.Image")));
             this.reservasToolStripMenuItem.Name = "reservasToolStripMenuItem";
-            this.reservasToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
+            this.reservasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.reservasToolStripMenuItem.Text = "Reservas";
             this.reservasToolStripMenuItem.Click += new System.EventHandler(this.Reservas_Click);
+            // 
+            // informesToolStripMenuItem
+            // 
+            this.informesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.minutosPorTrabajadorToolStripMenuItem,
+            this.reservasPorFechaToolStripMenuItem,
+            this.serviciosPorPeluqueriaToolStripMenuItem});
+            this.informesToolStripMenuItem.Name = "informesToolStripMenuItem";
+            this.informesToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
+            this.informesToolStripMenuItem.Text = "Informes";
+            // 
+            // minutosPorTrabajadorToolStripMenuItem
+            // 
+            this.minutosPorTrabajadorToolStripMenuItem.Name = "minutosPorTrabajadorToolStripMenuItem";
+            this.minutosPorTrabajadorToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
+            this.minutosPorTrabajadorToolStripMenuItem.Text = "Minutos por trabajador";
+            // 
+            // reservasPorFechaToolStripMenuItem
+            // 
+            this.reservasPorFechaToolStripMenuItem.Name = "reservasPorFechaToolStripMenuItem";
+            this.reservasPorFechaToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
+            this.reservasPorFechaToolStripMenuItem.Text = "Reservas por fecha";
+            // 
+            // serviciosPorPeluqueriaToolStripMenuItem
+            // 
+            this.serviciosPorPeluqueriaToolStripMenuItem.Name = "serviciosPorPeluqueriaToolStripMenuItem";
+            this.serviciosPorPeluqueriaToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
+            this.serviciosPorPeluqueriaToolStripMenuItem.Text = "Servicios por peluqueria";
             // 
             // ayudaToolStripMenuItem
             // 
@@ -133,8 +164,9 @@
             // 
             // acercaDeToolStripMenuItem
             // 
+            this.acercaDeToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("acercaDeToolStripMenuItem.Image")));
             this.acercaDeToolStripMenuItem.Name = "acercaDeToolStripMenuItem";
-            this.acercaDeToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
+            this.acercaDeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.acercaDeToolStripMenuItem.Text = "Acerca de";
             this.acercaDeToolStripMenuItem.Click += new System.EventHandler(this.AcercaDe_Click);
             // 
@@ -145,12 +177,6 @@
             this.MainContentPanel.Name = "MainContentPanel";
             this.MainContentPanel.Size = new System.Drawing.Size(1200, 696);
             this.MainContentPanel.TabIndex = 0;
-            // 
-            // informesToolStripMenuItem
-            // 
-            this.informesToolStripMenuItem.Name = "informesToolStripMenuItem";
-            this.informesToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
-            this.informesToolStripMenuItem.Text = "Informes";
             // 
             // MainForm
             // 
@@ -170,5 +196,8 @@
         }
 
         private System.Windows.Forms.ToolStripMenuItem informesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem minutosPorTrabajadorToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reservasPorFechaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem serviciosPorPeluqueriaToolStripMenuItem;
     }
 }

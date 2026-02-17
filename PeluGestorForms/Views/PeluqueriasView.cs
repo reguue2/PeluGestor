@@ -157,5 +157,20 @@ namespace PeluGestor.Views
                 Grid.Columns["DiasCerrados"].Width = 160;
             }
         }
+
+        private void Nueva_Click(object sender, EventArgs e)
+        {
+            btnAnadir_Click(sender, e);
+        }
+
+        private void Editar_Click(object sender, EventArgs e)
+        {
+            btnEditar_Click(sender, e);
+        }
+
+        private void Eliminar_Click(object sender, EventArgs e)
+        {
+            btnEliminar_Click(sender, e);
+        }
     }
 }

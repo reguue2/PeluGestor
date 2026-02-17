@@ -55,8 +55,48 @@ namespace PeluGestor
 
         private void AcercaDe_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("PeluGestor\nAplicacion de gestion de peluquerias\n\nProyecto de Desarrollo de Interfaces",
+            MessageBox.Show("PeluGestor\nAplicacion de gestion de peluquerias\n\nProyecto de Desarrollo de Interfaces\nDesarrollado por Diego Regueira",
                 "Acerca de", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        /*private void minutosPorTrabajadorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MinutosPorTrabajador rpt = new MinutosPorTrabajador();
+
+            InformeViewerForm visor = new InformeViewerForm(rpt);
+            visor.ShowDialog();
+        }
+
+        private void reservasPorFechaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DateTime fechaInicio;
+            DateTime fechaFin;
+
+            if (!DateTime.TryParse(
+                Microsoft.VisualBasic.Interaction.InputBox(
+                    "Introduce la fecha de inicio (yyyy-MM-dd)"),
+                    out fechaInicio)) return;
+
+            if (!DateTime.TryParse(
+                Microsoft.VisualBasic.Interaction.InputBox(
+                    "Introduce la fecha de fin (yyyy-MM-dd)"),
+                    out fechaFin)) return;
+
+            ReservasPorFecha rpt = new ReservasPorFecha();
+
+            rpt.SetParameterValue("FechaInicio", fechaInicio);
+            rpt.SetParameterValue("FechaFin", fechaFin);
+
+            InformeViewerForm visor = new InformeViewerForm(rpt);
+            visor.ShowDialog();
+        }
+
+        private void serviciosPorPeluqueriaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ServiciosPorPeluqueria rpt = new ServiciosPorPeluqueria();
+
+            InformeViewerForm visor = new InformeViewerForm(rpt);
+            visor.ShowDialog();
+        }*/
     }
 }

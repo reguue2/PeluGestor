@@ -1,199 +1,189 @@
-﻿using System.Windows.Forms;
+﻿using System.Drawing;
+using System.Windows.Forms;
 
 namespace PeluGestor.Views
 {
     partial class InicioView
     {
         private System.ComponentModel.IContainer components = null;
-        private System.Windows.Forms.Label lblTitulo;
-        private System.Windows.Forms.Label lblSubtitulo;
-        private System.Windows.Forms.Label lblDescripcion;
-        private System.Windows.Forms.GroupBox grpFunciones;
-        private System.Windows.Forms.Label lblF1;
-        private System.Windows.Forms.Label lblF2;
-        private System.Windows.Forms.Label lblF3;
-        private System.Windows.Forms.Label lblF4;
-        private System.Windows.Forms.GroupBox grpRecomendacion;
-        private System.Windows.Forms.Label lblR1;
-        private System.Windows.Forms.Label lblR2;
-        private System.Windows.Forms.Label lblR3;
-        private System.Windows.Forms.Label lblFooter;
+
+        private Label lblTitulo;
+        private Label lblSubtitulo;
+        private Label lblDescripcion;
+
+        private GroupBox grpFunciones;
+        private Label lblF1;
+        private Label lblF2;
+        private Label lblF3;
+        private Label lblF4;
+
+        private GroupBox grpFlujo;
+        private Label lblFlujo1;
+        private Label lblFlujo2;
+        private Label lblFlujo3;
+        private Label lblFlujo4;
+        private Label lblFlujo5;
+
+        private GroupBox grpInformes;
+        private Label lblI1;
+        private Label lblI2;
+        private Label lblI3;
+
+        private GroupBox grpConsejos;
+        private Label lblC1;
+        private Label lblC2;
+        private Label lblC3;
+        private Label lblC4;
+
+        private Label lblFooter;
 
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
                 components.Dispose();
-
             base.Dispose(disposing);
         }
 
         private void InitializeComponent()
         {
-            this.lblTitulo = new System.Windows.Forms.Label();
-            this.lblSubtitulo = new System.Windows.Forms.Label();
-            this.lblDescripcion = new System.Windows.Forms.Label();
-            this.grpFunciones = new System.Windows.Forms.GroupBox();
-            this.lblF4 = new System.Windows.Forms.Label();
-            this.lblF3 = new System.Windows.Forms.Label();
-            this.lblF2 = new System.Windows.Forms.Label();
-            this.lblF1 = new System.Windows.Forms.Label();
-            this.grpRecomendacion = new System.Windows.Forms.GroupBox();
-            this.lblR3 = new System.Windows.Forms.Label();
-            this.lblR2 = new System.Windows.Forms.Label();
-            this.lblR1 = new System.Windows.Forms.Label();
-            this.lblFooter = new System.Windows.Forms.Label();
-            this.grpFunciones.SuspendLayout();
-            this.grpRecomendacion.SuspendLayout();
-            this.SuspendLayout();
-            // 
-            // lblTitulo
-            // 
-            this.lblTitulo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblTitulo.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold);
-            this.lblTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(30)))), ((int)(((byte)(69)))));
-            this.lblTitulo.Location = new System.Drawing.Point(0, 0);
-            this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(1347, 60);
-            this.lblTitulo.TabIndex = 5;
-            this.lblTitulo.Text = "Bienvenido a Integrow";
-            this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblSubtitulo
-            // 
-            this.lblSubtitulo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblSubtitulo.Location = new System.Drawing.Point(0, 60);
-            this.lblSubtitulo.Name = "lblSubtitulo";
-            this.lblSubtitulo.Size = new System.Drawing.Size(1347, 30);
-            this.lblSubtitulo.TabIndex = 4;
-            this.lblSubtitulo.Text = "Aplicacion de gestion de peluquerias";
-            this.lblSubtitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblDescripcion
-            // 
-            this.lblDescripcion.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblDescripcion.Location = new System.Drawing.Point(0, 90);
-            this.lblDescripcion.Name = "lblDescripcion";
-            this.lblDescripcion.Size = new System.Drawing.Size(1347, 30);
-            this.lblDescripcion.TabIndex = 3;
-            this.lblDescripcion.Text = "Control centralizado de negocios, empleados y reservas";
-            this.lblDescripcion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // grpFunciones
-            // 
-            this.grpFunciones.Controls.Add(this.lblF4);
-            this.grpFunciones.Controls.Add(this.lblF3);
-            this.grpFunciones.Controls.Add(this.lblF2);
-            this.grpFunciones.Controls.Add(this.lblF1);
-            this.grpFunciones.Dock = System.Windows.Forms.DockStyle.Top;
-            this.grpFunciones.Location = new System.Drawing.Point(0, 120);
-            this.grpFunciones.Name = "grpFunciones";
-            this.grpFunciones.Padding = new System.Windows.Forms.Padding(30, 10, 3, 3);
-            this.grpFunciones.Size = new System.Drawing.Size(1347, 189);
-            this.grpFunciones.TabIndex = 2;
-            this.grpFunciones.TabStop = false;
-            this.grpFunciones.Text = "¿Que puedes hacer desde aqui?";
-            // 
-            // lblF4
-            // 
-            this.lblF4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblF4.Location = new System.Drawing.Point(30, 92);
-            this.lblF4.Name = "lblF4";
-            this.lblF4.Size = new System.Drawing.Size(1314, 23);
-            this.lblF4.TabIndex = 0;
-            this.lblF4.Text = "• Visualizar la informacion de forma clara y ordenada";
-            // 
-            // lblF3
-            // 
-            this.lblF3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblF3.Location = new System.Drawing.Point(30, 69);
-            this.lblF3.Name = "lblF3";
-            this.lblF3.Size = new System.Drawing.Size(1314, 23);
-            this.lblF3.TabIndex = 1;
-            this.lblF3.Text = "• Controlar horarios, precios y disponibilidad";
-            // 
-            // lblF2
-            // 
-            this.lblF2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblF2.Location = new System.Drawing.Point(30, 46);
-            this.lblF2.Name = "lblF2";
-            this.lblF2.Size = new System.Drawing.Size(1314, 23);
-            this.lblF2.TabIndex = 2;
-            this.lblF2.Text = "• Crear y administrar reservas de clientes";
-            // 
-            // lblF1
-            // 
-            this.lblF1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblF1.Location = new System.Drawing.Point(30, 23);
-            this.lblF1.Name = "lblF1";
-            this.lblF1.Size = new System.Drawing.Size(1314, 23);
-            this.lblF1.TabIndex = 3;
-            this.lblF1.Text = "• Gestionar peluquerias, empleados y servicios";
-            // 
-            // grpRecomendacion
-            // 
-            this.grpRecomendacion.Controls.Add(this.lblR3);
-            this.grpRecomendacion.Controls.Add(this.lblR2);
-            this.grpRecomendacion.Controls.Add(this.lblR1);
-            this.grpRecomendacion.Dock = System.Windows.Forms.DockStyle.Top;
-            this.grpRecomendacion.Location = new System.Drawing.Point(0, 309);
-            this.grpRecomendacion.Name = "grpRecomendacion";
-            this.grpRecomendacion.Padding = new System.Windows.Forms.Padding(30, 10, 3, 3);
-            this.grpRecomendacion.Size = new System.Drawing.Size(1347, 120);
-            this.grpRecomendacion.TabIndex = 1;
-            this.grpRecomendacion.TabStop = false;
-            this.grpRecomendacion.Text = "Recomendacion de uso";
-            // 
-            // lblR3
-            // 
-            this.lblR3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblR3.Location = new System.Drawing.Point(30, 69);
-            this.lblR3.Name = "lblR3";
-            this.lblR3.Size = new System.Drawing.Size(1314, 23);
-            this.lblR3.TabIndex = 0;
-            this.lblR3.Text = "3. Comienza a gestionar reservas de clientes";
-            // 
-            // lblR2
-            // 
-            this.lblR2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblR2.Location = new System.Drawing.Point(30, 46);
-            this.lblR2.Name = "lblR2";
-            this.lblR2.Size = new System.Drawing.Size(1314, 23);
-            this.lblR2.TabIndex = 1;
-            this.lblR2.Text = "2. Da de alta peluqueros y servicios";
-            // 
-            // lblR1
-            // 
-            this.lblR1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblR1.Location = new System.Drawing.Point(30, 23);
-            this.lblR1.Name = "lblR1";
-            this.lblR1.Size = new System.Drawing.Size(1314, 23);
-            this.lblR1.TabIndex = 2;
-            this.lblR1.Text = "1. Crea o revisa las peluquerias registradas";
-            // 
-            // lblFooter
-            // 
-            this.lblFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.lblFooter.Location = new System.Drawing.Point(0, 688);
-            this.lblFooter.Name = "lblFooter";
-            this.lblFooter.Size = new System.Drawing.Size(1347, 30);
-            this.lblFooter.TabIndex = 0;
-            this.lblFooter.Text = "Proyecto desarrollado por Diego Regueira · Desarrollo de Interfaces";
-            this.lblFooter.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // InicioView
-            // 
-            this.Controls.Add(this.lblFooter);
-            this.Controls.Add(this.grpRecomendacion);
-            this.Controls.Add(this.grpFunciones);
-            this.Controls.Add(this.lblDescripcion);
-            this.Controls.Add(this.lblSubtitulo);
-            this.Controls.Add(this.lblTitulo);
-            this.Name = "InicioView";
-            this.Size = new System.Drawing.Size(1347, 718);
-            this.grpFunciones.ResumeLayout(false);
-            this.grpRecomendacion.ResumeLayout(false);
-            this.ResumeLayout(false);
+            this.BackColor = Color.WhiteSmoke;
 
+            lblTitulo = new Label();
+            lblSubtitulo = new Label();
+            lblDescripcion = new Label();
+            lblFooter = new Label();
+
+            grpFunciones = new GroupBox();
+            grpFlujo = new GroupBox();
+            grpInformes = new GroupBox();
+            grpConsejos = new GroupBox();
+
+            lblTitulo.Dock = DockStyle.Top;
+            lblTitulo.Height = 70;
+            lblTitulo.Font = new Font("Segoe UI", 24F, FontStyle.Bold);
+            lblTitulo.ForeColor = Color.FromArgb(28, 30, 69);
+            lblTitulo.Text = "Bienvenido a Integrow";
+            lblTitulo.TextAlign = ContentAlignment.MiddleCenter;
+
+            lblSubtitulo.Dock = DockStyle.Top;
+            lblSubtitulo.Height = 30;
+            lblSubtitulo.Font = new Font("Segoe UI", 12F);
+            lblSubtitulo.ForeColor = Color.DimGray;
+            lblSubtitulo.Text = "Sistema de Gestión de Peluquerías";
+            lblSubtitulo.TextAlign = ContentAlignment.MiddleCenter;
+
+            lblDescripcion.Dock = DockStyle.Top;
+            lblDescripcion.Height = 35;
+            lblDescripcion.Font = new Font("Segoe UI", 10F);
+            lblDescripcion.ForeColor = Color.Gray;
+            lblDescripcion.Text = "Control centralizado de negocios, empleados y reservas";
+            lblDescripcion.TextAlign = ContentAlignment.MiddleCenter;
+
+            grpFunciones.Text = "Funciones del sistema";
+            grpFunciones.Dock = DockStyle.Fill;
+            grpFunciones.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            grpFunciones.BackColor = Color.White;
+            grpFunciones.Padding = new Padding(20);
+
+            lblF1 = CrearItem("• Gestionar peluquerías, empleados y servicios");
+            lblF2 = CrearItem("• Crear y administrar reservas de clientes");
+            lblF3 = CrearItem("• Controlar horarios, precios y disponibilidad");
+            lblF4 = CrearItem("• Visualizar la información de forma clara");
+
+            grpFunciones.Controls.Add(lblF4);
+            grpFunciones.Controls.Add(lblF3);
+            grpFunciones.Controls.Add(lblF2);
+            grpFunciones.Controls.Add(lblF1);
+
+            grpFlujo.Text = "Flujo de trabajo recomendado";
+            grpFlujo.Dock = DockStyle.Fill;
+            grpFlujo.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            grpFlujo.BackColor = Color.White;
+            grpFlujo.Padding = new Padding(20);
+
+            lblFlujo1 = CrearItem("1. Registrar una peluquería con su horario.");
+            lblFlujo2 = CrearItem("2. Añadir peluqueros a cada peluquería.");
+            lblFlujo3 = CrearItem("3. Configurar servicios con precio y duración.");
+            lblFlujo4 = CrearItem("4. Crear reservas para los clientes.");
+            lblFlujo5 = CrearItem("5. Analizar la carga de trabajo mediante informes.");
+
+            grpFlujo.Controls.Add(lblFlujo5);
+            grpFlujo.Controls.Add(lblFlujo4);
+            grpFlujo.Controls.Add(lblFlujo3);
+            grpFlujo.Controls.Add(lblFlujo2);
+            grpFlujo.Controls.Add(lblFlujo1);
+
+            grpInformes.Text = "Informes disponibles";
+            grpInformes.Dock = DockStyle.Fill;
+            grpInformes.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            grpInformes.BackColor = Color.White;
+            grpInformes.Padding = new Padding(20);
+
+            lblI1 = CrearItem("• Minutos trabajados por peluquero.");
+            lblI2 = CrearItem("• Número de reservas por fecha.");
+            lblI3 = CrearItem("• Servicios más utilizados por peluquería.");
+
+            grpInformes.Controls.Add(lblI3);
+            grpInformes.Controls.Add(lblI2);
+            grpInformes.Controls.Add(lblI1);
+
+            grpConsejos.Text = "Consejos de uso";
+            grpConsejos.Dock = DockStyle.Fill;
+            grpConsejos.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            grpConsejos.BackColor = Color.White;
+            grpConsejos.Padding = new Padding(20);
+
+            lblC1 = CrearItem("• Revise periódicamente las reservas futuras.");
+            lblC2 = CrearItem("• Mantenga actualizada la duración de servicios.");
+            lblC3 = CrearItem("• Utilice los informes para optimizar recursos.");
+            lblC4 = CrearItem("• Controle la disponibilidad del personal.");
+
+            grpConsejos.Controls.Add(lblC4);
+            grpConsejos.Controls.Add(lblC3);
+            grpConsejos.Controls.Add(lblC2);
+            grpConsejos.Controls.Add(lblC1);
+
+            TableLayoutPanel panelDashboard = new TableLayoutPanel();
+            panelDashboard.Dock = DockStyle.Fill;
+            panelDashboard.ColumnCount = 2;
+            panelDashboard.RowCount = 2;
+            panelDashboard.Padding = new Padding(40, 20, 40, 20);
+            panelDashboard.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            panelDashboard.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            panelDashboard.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            panelDashboard.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+
+            panelDashboard.Controls.Add(grpFunciones, 0, 0);
+            panelDashboard.Controls.Add(grpFlujo, 1, 0);
+            panelDashboard.Controls.Add(grpInformes, 0, 1);
+            panelDashboard.Controls.Add(grpConsejos, 1, 1);
+
+            lblFooter.Dock = DockStyle.Bottom;
+            lblFooter.Height = 30;
+            lblFooter.Font = new Font("Segoe UI", 9F);
+            lblFooter.ForeColor = Color.Gray;
+            lblFooter.Text = "Proyecto desarrollado por Diego Regueira · Desarrollo de Interfaces";
+            lblFooter.TextAlign = ContentAlignment.MiddleCenter;
+
+            this.Controls.Add(panelDashboard);
+            this.Controls.Add(lblFooter);
+            this.Controls.Add(lblDescripcion);
+            this.Controls.Add(lblSubtitulo);
+            this.Controls.Add(lblTitulo);
+
+            this.Size = new Size(1347, 718);
+        }
+
+        private Label CrearItem(string texto)
+        {
+            return new Label()
+            {
+                Dock = DockStyle.Top,
+                Height = 25,
+                Font = new Font("Segoe UI", 9F),
+                ForeColor = Color.Black,
+                Text = texto
+            };
         }
     }
 }

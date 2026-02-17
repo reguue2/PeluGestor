@@ -231,5 +231,20 @@ namespace PeluGestor.Views
 
             
         }
+
+        private void nuevoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            btnNueva_Click(sender, e);
+        }
+
+        private void editarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            btnEditar_Click(sender, e);
+        }
+
+        private void eliminarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            btnEliminar_Click(sender, e);
+        }
     }
 }
